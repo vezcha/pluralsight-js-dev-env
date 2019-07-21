@@ -1,0 +1,34 @@
+{
+  "name": "pluralsight-js-dev-env",
+  "version": "1.0.0",
+  "description": "Starting kit template",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prestart": "node buildScripts/startMessage.js",
+    "start": "npm-run-all --parallel security-check2 open:src",
+    "open:src": "node buildScripts/srcServer.js",
+    "security-check": "nsp check",
+    "security-check2": "npm audit",
+    "localtunnel": "lt --port 3000",
+	"share": "npm-run-all --parallel open:src localtunnel"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vezcha/pluralsight-js-dev-env.git"
+  },
+  "author": "vezcha",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vezcha/pluralsight-js-dev-env/issues"
+  },
+  "homepage": "https://github.com/vezcha/pluralsight-js-dev-env#readme",
+  "dependencies": {
+    "babel": "^6.23.0",
+    "chalk": "^2.4.2",
+    "express": "^4.17.1",
+    "nodemon": "^1.19.1",
+    "npm-run-all": "^4.1.5",
+    "open": "^6.4.0"
+  }
+}
