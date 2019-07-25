@@ -17,7 +17,12 @@
     "share": "npm-run-all --parallel open:src localtunnel",
     "generate-mock-data": "babel-node buildScripts/generateMockData",
     "prestart-mockapi": "npm run generate-mock-data",
-    "start-mockapi": "npx json-server --watch src/api/db.json --port 3001"
+    "start-mockapi": "npx json-server --watch src/api/db.json --port 3001",
+    "clean-dist": "rimraf ./dist && mkdir dist",
+    "prebuild": "npm-run-all clean-dist test lint",
+    "build": "babel-node buildScripts/build.js",
+    "postbuild": "babel-node buildScripts/distServer.js",
+    "deploy": "surge ./dist"
   },
   "repository": {
     "type": "git",
@@ -51,10 +56,14 @@
     "babel-loader": "^7.1.5",
     "babel-preset-latest": "^6.16.0",
     "babel-register": "6.16.3",
+    "compression": "1.6.2",
+    "extract-text-webpack-plugin": "1.0.1",
+    "html-webpack-plugin": "2.22.0",
     "json-schema-faker": "0.3.6",
     "eslint": "^3.4.0",
     "eslint-plugin-import": "^1.14.0",
     "eslint-watch": "^2.1.14",
+    "rimraf": "2.5.4",
     "webpack": "1.13.2",
     "webpack-dev-middleware": "1.8.4",
     "webpack-hot-middleware": "2.13.0",

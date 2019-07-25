@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 import  {getUsers, deleteUser} from './api/userApi';
 
 console.log(getUsers());
