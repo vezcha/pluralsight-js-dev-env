@@ -1,0 +1,28 @@
+{
+  "users": [
+    {
+      "id": 83600164,
+      "firstName": "Bettie",
+      "lastName": "Reilly",
+      "email": "Jazmin84@yahoo.com"
+    },
+    {
+      "id": 46967364,
+      "firstName": "Anissa",
+      "lastName": "Pacocha",
+      "email": "Gail.Streich42@hotmail.com"
+    },
+    {
+      "id": 86763109,
+      "firstName": "Sheridan",
+      "lastName": "Zieme",
+      "email": "Declan18@hotmail.com"
+    },
+    {
+      "id": 72513448,
+      "firstName": "Candelario",
+      "lastName": "Mohr",
+      "email": "Henderson.Johnston@gmail.com"
+    }
+  ]
+}
